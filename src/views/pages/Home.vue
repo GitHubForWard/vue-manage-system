@@ -12,11 +12,11 @@
         </div>
         <el-divider></el-divider>
         <el-row class="loginInfo">
-          <el-col :xs="24" :sm="24" :md="12" :lg="24" :xl="8">
+          <el-col :xs="24" :sm="24" :md="12" :lg="24" :xl="24">
             <i>上次登录时间：</i>
             {{ lastTime }}
           </el-col>
-          <el-col :xs="24" :sm="24" :md="12" :lg="24" :xl="8">
+          <el-col :xs="24" :sm="24" :md="12" :lg="24" :xl="24">
             <i>上次登录地点：</i>
             {{ lastCity }}
           </el-col>
