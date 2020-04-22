@@ -82,7 +82,7 @@
 </template>
 
 <script>
-import Echarts from "./../../components/layout/Echarts";
+import Echarts from "./../../components/pages/Echarts";
 import CountTo from "vue-count-to";
 export default {
   components: {
