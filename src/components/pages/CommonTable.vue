@@ -19,8 +19,8 @@
       </el-table-column>
 
       <el-table-column align="center" label="操作" width="180">
-        <template>
-          <el-button size="mini">编辑</el-button>
+        <template slot-scope="scope">
+          <el-button size="mini" @click="handleEdit(scope.row)">编辑</el-button>
           <el-button size="mini" type="danger">删除</el-button>
         </template>
       </el-table-column>
@@ -45,6 +45,9 @@ export default {
   methods: {
     changePage(page) {
       this.$emit("changePage", page);
+    },
+    handleEdit(row) {
+      this.$emit("edit", row);
     }
   }
 };
