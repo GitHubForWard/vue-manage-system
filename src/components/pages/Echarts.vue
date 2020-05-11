@@ -23,7 +23,6 @@ export default {
   },
   computed: {
     options() {
-      console.log(this.isAxisChart);
       return this.isAxisChart ? this.axisOption : this.normalOption;
     },
     isCollapse() {
@@ -135,7 +134,6 @@ export default {
         this.axisOption.legend.data = this.chartData.legend;
         this.axisOption.series = this.chartData.series;
       } else {
-        console.log("不是折线图");
         this.normalOption = this.chartData;
       }
     },

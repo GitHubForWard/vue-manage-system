@@ -27,8 +27,14 @@ Vue.config.productionTip = false;
 router.beforeEach((to, from, next) => {
     // 开启进度条
     NProgress.start();
+    store.commit('getToken');
     store.commit('getMenu');
-    next();
+    let token = store.state.user.token;
+    if (!token && to.name !== 'login') {
+        next({ name: 'login' })
+    } else {
+        next();
+    }
 })
 
 router.afterEach(() => {
@@ -38,5 +44,8 @@ router.afterEach(() => {
 new Vue({
     router,
     store,
-    render: h => h(App)
+    render: h => h(App),
+    created() {
+        store.commit('addMenu', router);
+    }
 }).$mount("#app");

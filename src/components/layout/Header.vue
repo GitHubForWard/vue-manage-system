@@ -15,6 +15,7 @@
         <el-dropdown-menu slot="dropdown">
           <el-dropdown-item icon="el-icon-user">个人中心</el-dropdown-item>
           <el-dropdown-item icon="el-icon-setting">设置</el-dropdown-item>
+          <el-dropdown-item @click.native="logout" icon="el-icon-bottom-left">退出</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
     </div>
@@ -39,6 +40,12 @@ export default {
   methods: {
     toggleCollapsedSidebar() {
       this.$store.commit("collapseMenu");
+    },
+    logout() {
+      this.$store.commit("clearMenu");
+      this.$store.commit("clearToken");
+      this.$router.push({ name: "login" });
+      location.reload();
     }
   }
 };
@@ -54,6 +61,10 @@ header {
   div {
     display: flex;
     align-items: center;
+
+    .el-dropdown {
+      cursor: pointer;
+    }
 
     i {
       display: block;

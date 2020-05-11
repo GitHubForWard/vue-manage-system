@@ -31,8 +31,8 @@
 </template>
 
 <script>
-import CommonForm from "./../../components/pages/CommonForm";
-import CommonTable from "./../../components/pages/CommonTable";
+import CommonForm from "./../../../components/pages/CommonForm";
+import CommonTable from "./../../../components/pages/CommonTable";
 
 export default {
   components: {

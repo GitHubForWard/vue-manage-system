@@ -49,7 +49,7 @@ export default {
     }
   },
   mounted() {
-    console.log(this.reuse);
+    console.log("路由复用", this.reuse);
   }
 };
 </script>

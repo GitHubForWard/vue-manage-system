@@ -1,20 +1,12 @@
 <template>
-  <div id="app">
-    <Layout />
-  </div>
+  <transition>
+    <router-view></router-view>
+  </transition>
 </template>
 <script>
-import Layout from "./views/default/Layout";
-export default {
-  components: {
-    Layout
-  }
-};
 </script>
 <style lang="scss">
-#app {
-  height: 100vh;
-}
+// 路由加载进度条颜色
 #nprogress .bar {
   background: red !important;
 }

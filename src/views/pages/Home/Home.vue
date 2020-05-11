@@ -82,7 +82,7 @@
 </template>
 
 <script>
-import Echarts from "./../../components/pages/Echarts";
+import Echarts from "./../../../components/pages/Echarts";
 import CountTo from "vue-count-to";
 export default {
   components: {
@@ -91,7 +91,7 @@ export default {
   },
   data() {
     return {
-      userAvatar: require("./../../assets/images/user.png"),
+      userAvatar: require("./../../../assets/images/user.png"),
       loading: true,
       lastTime: "",
       lastCity: "",
